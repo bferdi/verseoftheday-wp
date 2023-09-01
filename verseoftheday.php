@@ -174,39 +174,39 @@ function custom_verse_plugin_register_settings() {
 add_action('admin_init', 'custom_verse_plugin_register_settings');
 
 // Sanitize settings
-function custom_verse_plugin_sanitize_settings($input) {
-    $sanitized_input = array();
+//function custom_verse_plugin_sanitize_settings($input) {
+  //  $sanitized_input = array();
 
-    if (isset($input['timezone'])) {
-        $sanitized_input['timezone'] = sanitize_text_field($input['timezone']);
-    }
+   // if (isset($input['timezone'])) {
+    //    $sanitized_input['timezone'] = sanitize_text_field($input['timezone']);
+   // }
 
-    if (isset($input['query_string'])) {
-        $sanitized_input['query_string'] = sanitize_text_field($input['query_string']);
-    }
+  //  if (isset($input['query_string'])) {
+  //      $sanitized_input['query_string'] = sanitize_text_field($input['query_string']);
+ //   }
 
-    return $sanitized_input;
-}
+ //   return $sanitized_input;
+//}
 
 // Section callback
-function custom_verse_plugin_section_callback() {
-    echo '<p>Configure general settings for the Custom Verse Plugin.</p>';
-}
+//function custom_verse_plugin_section_callback() {
+  //  echo '<p>Configure general settings for the Custom Verse Plugin.</p>';
+//}
 
 // Timezone field callback
-function custom_verse_plugin_timezone_field_callback() {
-    $options = get_option('custom_verse_settings');
-    $timezone = isset($options['timezone']) ? $options['timezone'] : '';
+//function custom_verse_plugin_timezone_field_callback() {
+ //   $options = get_option('custom_verse_settings');
+ //   $timezone = isset($options['timezone']) ? $options['timezone'] : '';
 
-    echo '<input type="text" name="custom_verse_settings[timezone]" value="' . esc_attr($timezone) . '" class="regular-text">';
-    echo '<p class="description">Enter the timezone for verse dates (e.g., America/New_York).</p>';
-}
+  //  echo '<input type="text" name="custom_verse_settings[timezone]" value="' . esc_attr($timezone) . '" class="regular-text">';
+  //  echo '<p class="description">Enter the timezone for verse dates (e.g., America/New_York).</p>';
+//}
 
 // Query string field callback
-function custom_verse_plugin_query_string_field_callback() {
-    $options = get_option('custom_verse_settings');
-    $query_string = isset($options['query_string']) ? $options['query_string'] : '';
+//function custom_verse_plugin_query_string_field_callback() {
+ //   $options = get_option('custom_verse_settings');
+ //   $query_string = isset($options['query_string']) ? $options['query_string'] : '';
 
-    echo '<input type="text" name="custom_verse_settings[query_string]" value="' . esc_attr($query_string) . '" class="regular-text">';
-    echo '<p class="description">Enter the query string parameter for hiding verses (e.g., my_custom_query).</p>';
-}
+  //  echo '<input type="text" name="custom_verse_settings[query_string]" value="' . esc_attr($query_string) . '" class="regular-text">';
+  //  echo '<p class="description">Enter the query string parameter for hiding verses (e.g., my_custom_query).</p>';
+//}
